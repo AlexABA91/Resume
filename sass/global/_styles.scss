@@ -1,0 +1,26 @@
+/* wrapper */
+#wrapper {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(136, 127, 127, 0.534);
+}
+.layout {
+	margin: 0 auto;
+	position: relative;
+	width: 70%;
+}
+@media (max-width: 1000px) {
+	.layout {
+		width: 100%;
+	}
+}
+main {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+#content {
+	position: relative;
+}

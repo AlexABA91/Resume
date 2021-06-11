@@ -1,0 +1,107 @@
+main {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 10px 0 0;
+	padding: 50px;
+	background-color: rgb(188, 226, 98);
+	box-shadow: 5px 5px 5px -1px rgba(34, 60, 80, 0.6);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.education,
+	.con2,
+	.skils {
+		display: block;
+		width: 48%;
+		h2 {
+			font-size: 2em;
+			color: rgba(156, 58, 28, 0.938);
+			margin-bottom: 20px;
+		}
+		li {
+			width: 80%;
+			margin: 0 auto;
+			list-style: none;
+			& ul {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 7px;
+			}
+		}
+	}
+	.education {
+		display: block;
+		position: relative;
+		border-right: 5px dotted rgba(250, 250, 250, 0.781);
+		border-bottom: 5px dotted rgba(250, 250, 250, 0.781);
+
+		h2 {
+			font-size: 2em;
+			color: rgba(156, 58, 28, 0.938);
+			margin-bottom: 20px;
+		}
+		li ul p {
+			margin-top: 10px;
+			font-size: 1.5rem;
+			color: rgb(71, 80, 145);
+		}
+		& img {
+			height: 40px;
+			width: 40px;
+		}
+	}
+	.con2 {
+		position: relative;
+		border-left: 5px dotted rgba(250, 250, 250, 0.781);
+		border-bottom: 5px dotted rgba(250, 250, 250, 0.781);
+		& h2 {
+			text-align: end;
+		}
+		& li ul {
+			margin-top: 25px;
+			font-size: 1.5rem;
+			color: rgb(71, 80, 145);
+		}
+		& .work-list {
+			margin-bottom: 110px;
+			& p {
+				margin-top: 15px;
+			}
+		}
+	}
+	.skils {
+		display: flex;
+		position: relative;
+		height: 200px;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		& h2 {
+			width: 100%;
+		}
+		div img {
+			height: 75px;
+			width: 75px;
+		}
+	}
+}
+.mywork {
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+	& h2 {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 2rem;
+		color: rgba(156, 58, 28, 0.938);
+		text-align: center;
+	}
+	& a {
+		margin-top: 10px;
+	}
+}
