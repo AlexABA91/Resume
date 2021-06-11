@@ -558,8 +558,6 @@ header .data {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -ms-flex-preferred-size: 0 0 auto;
-      flex-basis: 0 0 auto;
   min-width: 200px;
   position: relative;
   right: 15%;
@@ -679,17 +677,17 @@ main .skils h2 {
   margin-bottom: 20px;
 }
 
-main .education li,
-main .con2 li,
-main .skils li {
+main .education ul,
+main .con2 ul,
+main .skils ul {
   width: 80%;
   margin: 0 auto;
   list-style: none;
 }
 
-main .education li ul,
-main .con2 li ul,
-main .skils li ul {
+main .education ul li,
+main .con2 ul li,
+main .skils ul li {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,7 +715,7 @@ main .education h2 {
   margin-bottom: 20px;
 }
 
-main .education li ul p {
+main .education ul li p {
   margin-top: 10px;
   font-size: 1.5rem;
   color: #475091;
@@ -738,7 +736,7 @@ main .con2 h2 {
   text-align: end;
 }
 
-main .con2 li ul {
+main .con2 ul li {
   margin-top: 25px;
   font-size: 1.5rem;
   color: #475091;
@@ -813,10 +811,10 @@ main .skils div img {
   main .skils h2 {
     font-size: 1.2rem;
   }
-  main .education li ul p {
+  main .education ul li p {
     font-size: 0.8rem;
   }
-  main .con2 li ul {
+  main .con2 ul li {
     font-size: 0.8rem;
   }
 }
@@ -837,7 +835,7 @@ main .skils div img {
     text-align: center;
   }
   main p,
-  main ul {
+  main li {
     text-align: center;
   }
   main .con2 .work-list {
