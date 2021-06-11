@@ -604,7 +604,6 @@ header .icon img {
 
 @media (max-width: 1200px) {
   header {
-    pointer-events: none;
     height: 100px;
   }
   header .data {
@@ -618,6 +617,7 @@ header .icon img {
     font-size: 17px;
   }
   header .avatar {
+    pointer-events: none;
     height: 100%;
     overflow: hidden;
   }

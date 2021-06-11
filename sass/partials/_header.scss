@@ -67,7 +67,6 @@ header {
 }
 @media (max-width: 1200px) {
 	header {
-		pointer-events: none;
 		height: 100px;
 		& .data {
 			right: 0%;
@@ -80,6 +79,7 @@ header {
 			}
 		}
 		& .avatar {
+			pointer-events: none;
 			height: 100%;
 			overflow: hidden;
 		}
