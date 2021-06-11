@@ -94,6 +94,7 @@ main {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-around;
+	overflow: hidden;
 	& h2 {
 		width: 100%;
 		margin-bottom: 20px;
@@ -103,5 +104,43 @@ main {
 	}
 	& a {
 		margin-top: 10px;
+	}
+}
+@media (max-width: 600px) {
+	main {
+		.education,
+		.con2 {
+			border: none;
+		}
+		.education h2,
+		.con2 h2,
+		.skils h2 {
+			font-size: 1.2rem;
+		}
+	}
+	main .education li ul p {
+		font-size: 0.8rem;
+	}
+
+	main .con2 li ul {
+		font-size: 0.8rem;
+	}
+	@media (max-width: 451px) {
+		main {
+			flex-direction: column;
+			align-items: center;
+			.education h2,
+			.con2 h2,
+			.skils h2 {
+				text-align: center;
+			}
+			p,
+			ul {
+				text-align: center;
+			}
+			.con2 .work-list {
+				margin-bottom: 20px;
+			}
+		}
 	}
 }

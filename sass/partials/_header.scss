@@ -88,3 +88,22 @@ header {
 		}
 	}
 }
+@media (max-width: 600px) {
+	header {
+		& .icon {
+			flex-wrap: wrap;
+			margin: 10px 10px 0 0;
+			& a img {
+				height: 20px;
+				width: 20px;
+			}
+		}
+		& .data .title {
+			margin: 5px 0 0 5px;
+			font-size: 10px;
+			& .mydata {
+				font-size: 12px;
+			}
+		}
+	}
+}
