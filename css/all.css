@@ -507,6 +507,81 @@ main {
   position: relative;
 }
 
+.preloder {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e7bbf;
+  z-index: 99;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.preloder .cube {
+  height: 500px;
+  width: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotate3d(1, 1, 0, -25deg);
+          transform: rotate3d(1, 1, 0, -25deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.preloder .cube .side {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  background-color: #8095db;
+}
+
+.preloder .cube .front {
+  -webkit-transform: translateZ(200px);
+          transform: translateZ(200px);
+  background-color: #83d918;
+}
+
+.preloder .cube .back {
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+          transform: rotateY(180deg) translateZ(200px);
+}
+
+.preloder .cube .top {
+  height: 400px;
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+          transform: rotateX(90deg) translateZ(200px);
+}
+
+.preloder .cube .bottom {
+  height: 400px;
+  -webkit-transform: rotateX(-90deg) translateZ(300px);
+          transform: rotateX(-90deg) translateZ(300px);
+}
+
+.preloder .cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+          transform: rotateY(-90deg) translateZ(200px);
+}
+
+.preloder .cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+          transform: rotateY(90deg) translateZ(200px);
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,8 +633,6 @@ header .data {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -ms-flex-preferred-size: 0 0 auto;
-      flex-basis: 0 0 auto;
   min-width: 200px;
   position: relative;
   right: 15%;
@@ -604,7 +677,6 @@ header .icon img {
 
 @media (max-width: 1200px) {
   header {
-    pointer-events: none;
     height: 100px;
   }
   header .data {
@@ -618,11 +690,31 @@ header .icon img {
     font-size: 17px;
   }
   header .avatar {
+    pointer-events: none;
     height: 100%;
     overflow: hidden;
   }
   header .avatar img:hover {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header .icon {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 10px 10px 0 0;
+  }
+  header .icon a img {
+    height: 20px;
+    width: 20px;
+  }
+  header .data .title {
+    margin: 5px 0 0 5px;
+    font-size: 10px;
+  }
+  header .data .title .mydata {
+    font-size: 12px;
   }
 }
 
@@ -660,17 +752,17 @@ main .skils h2 {
   margin-bottom: 20px;
 }
 
-main .education li,
-main .con2 li,
-main .skils li {
+main .education ul,
+main .con2 ul,
+main .skils ul {
   width: 80%;
   margin: 0 auto;
   list-style: none;
 }
 
-main .education li ul,
-main .con2 li ul,
-main .skils li ul {
+main .education ul li,
+main .con2 ul li,
+main .skils ul li {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,7 +790,7 @@ main .education h2 {
   margin-bottom: 20px;
 }
 
-main .education li ul p {
+main .education ul li p {
   margin-top: 10px;
   font-size: 1.5rem;
   color: #475091;
@@ -719,7 +811,7 @@ main .con2 h2 {
   text-align: end;
 }
 
-main .con2 li ul {
+main .con2 ul li {
   margin-top: 25px;
   font-size: 1.5rem;
   color: #475091;
@@ -769,6 +861,7 @@ main .skils div img {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  overflow: hidden;
 }
 
 .mywork h2 {
@@ -781,6 +874,48 @@ main .skils div img {
 
 .mywork a {
   margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  main .education,
+  main .con2 {
+    border: none;
+  }
+  main .education h2,
+  main .con2 h2,
+  main .skils h2 {
+    font-size: 1.2rem;
+  }
+  main .education ul li p {
+    font-size: 0.8rem;
+  }
+  main .con2 ul li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) and (max-width: 451px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .education h2,
+  main .con2 h2,
+  main .skils h2 {
+    text-align: center;
+  }
+  main p,
+  main li {
+    text-align: center;
+  }
+  main .con2 .work-list {
+    margin-bottom: 20px;
+  }
 }
 
 footer {

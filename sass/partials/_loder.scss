@@ -1,0 +1,51 @@
+.preloder {
+   position: fixed;
+   display: flex;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #1e7bbf;
+   z-index: 99;
+   overflow: hidden;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   perspective: 1000px;
+
+   & .cube {
+      height: 500px;
+      width: 400px;
+      transform-style: preserve-3d;
+      transform: rotate3d(1, 1, 0, -25deg);
+      backface-visibility: hidden;
+
+      & .side {
+         position: absolute;
+         height: inherit;
+         width: inherit;
+         background-color: #8095db;
+      }
+      .front {
+         transform: translateZ(200px);
+         background-color: #83d918;
+      }
+      .back {
+         transform: rotateY(180deg) translateZ(200px);
+      }
+      .top {
+         height: 400px;
+         transform: rotateX(90deg) translateZ(200px);
+      }
+      .bottom {
+         height: 400px;
+         transform: rotateX(-90deg) translateZ(300px);
+      }
+      .left {
+         transform: rotateY(-90deg) translateZ(200px);
+      }
+      .right {
+         transform: rotateY(90deg) translateZ(200px);
+      }
+   }
+}
