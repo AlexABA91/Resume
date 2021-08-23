@@ -547,6 +547,7 @@ main {
   transition: 0.5s all ease-out;
   height: 80%;
   width: 30%;
+  min-width: 30%;
   border-radius: 5%;
   background-color: #b2ef6c;
   -webkit-animation: myPage 2s ease;
@@ -625,6 +626,24 @@ main {
 .done .loader {
   height: 100%;
   width: 70%;
+}
+
+@media (max-width: 600px) {
+  .preloder .loader {
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  .preloder .loader #prosentage {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+.done .loader {
+  height: 100%;
+  width: 100%;
+  border-radius: 0%;
 }
 
 header {
