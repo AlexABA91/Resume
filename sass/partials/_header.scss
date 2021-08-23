@@ -16,15 +16,18 @@ header {
 
 		& img {
 			display: block;
-			width: 150px;
+			width: 200px;
 			height: 200px;
 			overflow: hidden;
 			transition: width 0.5s ease, height 0.2s ease;
 		}
 	}
+	& .avatar1 {
+		display: none;
+	}
 	.avatar img:hover {
 		height: 400px;
-		width: 300px;
+		width: 400px;
 		position: relative;
 		z-index: 5;
 	}
@@ -36,7 +39,7 @@ header {
 
 		min-width: 200px;
 		position: relative;
-		right: 15%;
+		right: 10%;
 		overflow: hidden;
 		z-index: 1;
 		& .title {
@@ -105,5 +108,16 @@ header {
 				font-size: 12px;
 			}
 		}
+	}
+}
+@media (min-width: 280px) and (max-width: 599px) {
+	header .avatar {
+		display: none;
+	}
+	header .avatar1 {
+		display: block;
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
 	}
 }
